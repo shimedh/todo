@@ -30,6 +30,20 @@ app.get('/api/items', db.getItems);
 app.post('/api/items', db.addItem);
 app.delete('/api/items/:id', db.deleteItem);
 
+app.get('/api/getroles', (req, res) =>{
+
+})
+
+app.get('/api/getroles', (req, res) => {
+  console.log('Got request');
+  res.send({
+    "roles": [
+      "Reader",
+      "Contributor"
+    ]
+  });
+})
+
 app.listen(port, () => {
   console.log(`Test Example app listening on port ${port}`)
 })
